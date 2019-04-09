@@ -18,8 +18,11 @@ ln -sf $HOME/miniconda3/bin/activate /usr/local/bin/conda-activate
 # Python Virtualenv alias
 alias venv="virtualenv -p $(which python3) venv && source venv/bin/activate"
 alias venv2="virtualenv -p $(which python2) venv && source venv/bin/activate"
-alias active_pycharm="sudo ~/Applications/IntelliJIDEALicenseServer/IntelliJIDEALicenseServer_darwin_amd64"
 
 # alias envsubst='/usr/local/opt/gettext/bin/envsubst'
 alias updatedb='sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist'
 alias helm-gke='helm --tiller-namespace helm-tiller'
+alias helm-wrapper='helm secrets --tiller-namespace helm-tiller'
+alias pes='pipenv shell'
+alias auto_comp_kubelet='source <(kubectl completion zsh)'
+alias kuberun='kubectl run --rm -it $(date +%s) --image'
