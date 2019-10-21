@@ -13,12 +13,16 @@
 # fi
 
 export GOPATH=$HOME/projects/go
+export FLUTTER_PATH=$HOME/projects/flutter
 export GOROOT=/usr/local/opt/go/libexec
-export PATH=$PATH:$GOPATH/bin:$GOROOT/bin
+export ANDROID_SDK=$HOME/Library/Android/sdk
+export PATH=$PATH:$GOPATH/bin:$GOROOT/bin:$FLUTTER_PATH/bin
 export PATH="/usr/local/opt/gettext/bin:$PATH"
+export PATH=$ANDROID_SDK/emulator:$PATH
 export fpath=(/usr/local/share/zsh-completions $fpath)
 
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export HTTP_PROXY=http://127.0.0.1:1087
 export HTTPS_PROXY=http://127.0.0.1:1087
+export GROOVY_HOME=/usr/local/opt/groovy/libexec
