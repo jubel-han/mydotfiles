@@ -26,3 +26,10 @@ export LANG=en_US.UTF-8
 export HTTP_PROXY=http://127.0.0.1:1087
 export HTTPS_PROXY=http://127.0.0.1:1087
 export GROOVY_HOME=/usr/local/opt/groovy/libexec
+export HOMEBREW_NO_AUTO_UPDATE=1
+export TILLER_NAMESPACE=helm-tiller
+
+# pyenv exports
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH=$PYENV_ROOT/shims:$PATH
+eval "$(pyenv init -)"
