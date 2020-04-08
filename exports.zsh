@@ -23,8 +23,8 @@ export fpath=(/usr/local/share/zsh-completions $fpath)
 
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
-export HTTP_PROXY=http://127.0.0.1:1087
-export HTTPS_PROXY=http://127.0.0.1:1087
+export HTTP_PROXY=http://127.0.0.1:1187
+export HTTPS_PROXY=http://127.0.0.1:1187
 export GROOVY_HOME=/usr/local/opt/groovy/libexec
 export HOMEBREW_NO_AUTO_UPDATE=1
 export TILLER_NAMESPACE=helm-tiller
@@ -33,3 +33,7 @@ export TILLER_NAMESPACE=helm-tiller
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH=$PYENV_ROOT/shims:$PATH
 eval "$(pyenv init -)"
+
+# nvm exports
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
