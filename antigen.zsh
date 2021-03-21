@@ -26,5 +26,11 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 # You probably will want to install powerline fonts https://github.com/powerline/fonts
 antigen theme bhilburn/powerlevel9k powerlevel9k
 
+# Kubetail
+antigen bundle johanhaleby/kubetail
+
+# poetry
+antigen bundle poetry
+
 # Tell antigen that you're done.
 antigen apply
