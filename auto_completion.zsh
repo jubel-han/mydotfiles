@@ -1,11 +1,3 @@
-# tabtab source for serverless package
-# uninstall by removing these lines or running `tabtab uninstall serverless`
-[[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
-
-# tabtab source for sls package
-# uninstall by removing these lines or running `tabtab uninstall sls`
-[[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
-
 # Enabling the kubernetes helm auto completion
 if [ ! $(which helm >> /dev/null) ]; then
    # https://github.com/helm/helm/issues/5046
@@ -20,3 +12,13 @@ source $HOME/Applications/google-cloud-sdk/completion.zsh.inc
 
 # enable the google cloud command cli auto completion for zsh
 source <(kubectl completion zsh)
+
+export FPATH=/opt/homebrew/share/zsh/site-functions:$FPATH
+export fpath=(/usr/local/share/zsh-completions $fpath)
+
+if type brew &>/dev/null; then
+   FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+
+   autoload -Uz compinit
+   compinit
+fi

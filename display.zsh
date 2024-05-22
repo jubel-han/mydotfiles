@@ -18,3 +18,5 @@ POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
 # export POWERLEVEL9K_RPROMPT_ON_NEWLINE=true
 # export POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX="%F{white}\u256d\u2500%f"
 # export POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%F{white}\u2570\u2500\u276f%f "
+
+POWERLEVEL9K_VCS_GIT_HOOKS=(vcs-detect-changes git-aheadbehind git-stash git-remotebranch git-tagname)

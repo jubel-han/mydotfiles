@@ -13,15 +13,10 @@
 # fi
 
 export GOPATH=$HOME/projects/go
-export FLUTTER_PATH=$HOME/projects/flutter
-export GOROOT=/usr/local/opt/go/libexec
-export ANDROID_SDK=$HOME/Library/Android/sdk
-export PATH=$PATH:$GOPATH/bin:$GOROOT/bin:$FLUTTER_PATH/bin:$HOME/.bin
-export PATH="/usr/local/opt/gettext/bin:$PATH"
-export PATH=$ANDROID_SDK/emulator:$PATH
+export GOROOT=/opt/homebrew/opt/go/libexec
+export PATH=$PATH:$GOPATH/bin:$GOROOT/bin:$HOME/.bin:$HOME/bin
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
-export fpath=(/usr/local/share/zsh-completions $fpath)
-export GROOVY_HOME=/usr/local/opt/groovy/libexec
+export GROOVY_HOME=/opt/homebrew/opt/groovy/libexec
 export HOMEBREW_NO_AUTO_UPDATE=1
 
 export LC_ALL=en_US.UTF-8
@@ -35,5 +30,15 @@ eval "$(pyenv init -)"
 # nvm exports
 compaudit | xargs chmod g-w
 export NVM_DIR="$HOME/.nvm"
-[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
-[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
+# https://cloud.google.com/blog/products/containers-kubernetes/kubectl-auth-changes-in-gke
+export USE_GKE_GCLOUD_AUTH_PLUGIN=True
+
+# workaround for python crash: We cannot safely call it or ignore it in the fork() child process. Crashing instead. Set a breakpoint on objc_initializeAfterForkError to debug.
+export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
+
+# TF configurations
+export TF_CLI_CONFIG_FILE=$HOME/.terraformrc
+export TF_PLUGIN_CACHE_DIR="$HOME/.terraform.d/plugins-cache"
